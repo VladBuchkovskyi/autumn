@@ -106,7 +106,7 @@ gulp.task('js', jsBuild);
 gulp.task('img', imgBuild);
 
 
-gulp.task('dev', watcher);
+gulp.task('dev', gulp.series(styleReset, watcher));
 
 gulp.task('build',gulp.series(
   cleanDist, styleReset,
