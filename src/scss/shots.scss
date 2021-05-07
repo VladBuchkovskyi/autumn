@@ -1,0 +1,21 @@
+@import "variables";
+
+.instagram-shots{
+  background-color: rgba(0,0,0,0.03);
+  margin-top: 40px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.shots__upper-line{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shots{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__picture{
+    width: 285px;
+  }
+}

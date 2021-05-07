@@ -1,0 +1,39 @@
+@import "variables";
+.posts-box{
+  margin-top: 66px;
+}
+.posts{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.post{
+  max-width: 585px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  &__picture-box{
+    margin-right: 20px;
+  }
+  &-picture{
+    width: 160px;
+  }
+  &__heading{
+    line-height: 2;
+    font-weight: 700;
+    font-size: 16px;
+    color: $primary-color;
+  }
+  &__subscribe{
+    margin-top: 1px;
+    margin-bottom: 13px;
+    font-size: 12px;
+    color:$small-text;
+  }
+  &__text{
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
