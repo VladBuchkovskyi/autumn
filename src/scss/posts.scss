@@ -1,6 +1,6 @@
 @import "variables";
 .posts-box{
-  margin-top: 66px;
+  margin-top: 38px;
 }
 .posts{
   display: flex;
@@ -9,10 +9,7 @@
   flex-wrap: wrap;
 }
 .post{
-  max-width: 585px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  //max-width: 262px;
   margin-bottom: 30px;
   &__picture-box{
     margin-right: 20px;
@@ -35,5 +32,26 @@
   &__text{
     font-size: 14px;
     line-height: 1.5;
+    display: none;
+  }
+}
+
+@media (min-width: 768px){
+  .posts-box{
+    margin-top: 56px;
+  }
+  .post{
+    max-width: 585px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    &__text{
+      display: block;
+    }
+  }
+}
+@media (min-width: 1200px){
+  .posts-box{
+    margin-top: 66px;
   }
 }

@@ -1,23 +1,121 @@
 @import "variables";
+.burger{
+  box-sizing: border-box;
+  width: 44px;
+  height: 37px;
+  background-color: #000;
+  padding-top: 13px;
+  margin-left: auto;
+  margin-top: 23px;
+}
+.burger-line{
+  width: 17px;
+  height: 2px;
+  background-color: #fff;
+  margin: auto;
+  transition: 0.5s;
+}
+.middle{
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.opened_burger{
+  & .middle{
+    opacity: 0;
+    transition: 0.5s;
+  }
+  & .burger-line:first-child{
+    transform-origin: center;
+    transform: translateY(4px) rotate(45deg);
+    transition: 0.5s;
+  }
+  & .burger-line:last-child{
+    transform-origin: center;
+    transform: translateY(-4px) rotate(-45deg);
+    transition: 0.5s;
+  }
+
+}
 .menu{
+  margin-bottom: 23px;
   text-transform: uppercase;
   font-size: 11px;
+  position: relative;
   & a{
     text-decoration: none;
     color: $primary-color;
     transition: 0.3s;
     &:hover{
       color: $hover;
-    ;
     }
   }
   & ul{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 45px;
-    margin-bottom: 50px;
-    padding-left: 180px;
-    padding-right: 180px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $burger-menu-bg;
+    width: 182px;
+    line-height: 2;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    & li{
+      padding-left: 13px;
+      margin-bottom: 8px;
+      &:first-child{
+        padding-top: 5px;
+      }
+      &:hover{
+        background-color: $burger-menu-bg-hover;
+        & a{
+          color: $hover;
+        }
+      }
+    }
+  }
+}
+.opened_menu{
+  height: 210px!important;
+}
+
+@media (min-width: 768px) {
+  .burger{
+    display: none;
+  }
+  .menu{
+    margin-bottom: 0;
+    & ul{
+      box-sizing: border-box;
+      height: 100%;
+      overflow: visible;
+      position: relative;
+      background-color: rgba(0,0,0,0);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 40px;
+      margin-bottom: 45px;
+      padding-left: 80px;
+      padding-right: 80px;
+      & li{
+        padding-left: 0;
+        padding-bottom: 0;
+        &:hover{
+          background-color: rgba(0,0,0,0);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .menu{
+    & ul{
+      margin-top: 40px;
+      margin-bottom: 45px;
+      padding-left: 180px;
+      padding-right: 180px;
+    }
   }
 }

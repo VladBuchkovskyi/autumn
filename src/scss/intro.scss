@@ -1,3 +1,14 @@
 .intro-picture{
-  max-width: 1170px;
+  max-width: 320px;
+}
+@media (min-width: 768px) {
+  .intro-picture{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro-picture{
+    max-width: 1170px;
+  }
 }

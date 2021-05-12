@@ -5,13 +5,30 @@ body{
   font-family: 'Roboto', sans-serif;
 }
 .container{
-  max-width: 1170px;
+  max-width: 320px;
   margin: auto;
 }
 .caption{
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   color: $primary-color;
   text-transform: uppercase;
   margin-bottom: 24px;
+}
+@media (min-width: 768px) {
+  .container{
+    max-width: 768px;
+  }
+  .caption{
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container{
+    max-width: 1170px;
+  }
+  .caption{
+    font-size: 16px;
+  }
 }
